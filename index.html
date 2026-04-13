@@ -1,0 +1,1144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="author" content="3ptp">
+<meta name="description" content="Trading Academy by 3ptp - Learn ICT concepts and get funded">
+<meta name="keywords" content="trading, ICT, forex, funded, prop firm, order blocks, sigma">
+<title>Trading Academy by 3ptp :: Home :: GET FUNDED OR STAY BROKE</title>
+<style type="text/css">
+body {
+  background-color: #c0c0c0;
+  background-image: url("data:image/gif;base64,R0lGODlhBAAEAIAAAMDAwP///yH5BAAAAAAALAAAAAAEAAQAAAIFhI+ha1AAOw==");
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000000;
+  margin: 4px;
+}
+a { color: #0000cc; }
+a:visited { color: #551a8b; }
+a:hover { color: #ff0000; }
+a:active { color: #ff0000; }
+
+td { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+
+.pagetitle {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #003399;
+  letter-spacing: 1px;
+}
+
+.sectiontitle {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #003399;
+  padding: 3px 6px;
+}
+
+.bodytext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.smalltext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #666666;
+}
+
+.bignum {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #cc0000;
+}
+
+.greentext {
+  color: #006600;
+  font-weight: bold;
+}
+
+.redtext {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+.winrate {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #cc0000;
+}
+
+.buybtn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #cc0000;
+  border: 2px outset #ff6666;
+  padding: 5px 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbtn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #dddddd;
+  border: 2px outset #ffffff;
+  padding: 3px 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.navbtn:hover {
+  background-color: #cccccc;
+  border: 2px inset #ffffff;
+  color: #000000;
+}
+
+.panel {
+  background-color: #ffffff;
+  border: 1px solid #999999;
+}
+
+.infobox {
+  background-color: #ffffcc;
+  border: 1px solid #999900;
+  padding: 6px;
+}
+
+.marqueetext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #003399;
+}
+
+.spinbox {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #003399;
+  display: inline-block;
+  animation: spin3d 5s ease-in-out infinite;
+}
+.spinbox.r { color: #cc0000; animation: spin3d 5s ease-in-out infinite 1s; }
+.spinbox.g { color: #006600; animation: spin3d 5s ease-in-out infinite 2s; }
+.spinbox.p { color: #660099; animation: spin3d 5s ease-in-out infinite 3s; }
+
+@keyframes spin3d {
+  0%, 25%, 75%, 100% { transform: perspective(400px) rotateY(0deg); }
+  45%, 55% { transform: perspective(400px) rotateY(360deg); }
+}
+
+.counter {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00ff00;
+  background-color: #000000;
+  padding: 2px 6px;
+  border: 2px inset #333333;
+  letter-spacing: 3px;
+}
+
+/* MODAL / POPUP */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 9000;
+}
+#buymodal {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: #c0c0c0;
+  border: 3px outset #ffffff;
+  width: 420px;
+  max-width: 95vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  display: none;
+}
+.modaltitlebar {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+}
+.modaltitlebar span { letter-spacing: 1px; }
+.modalclose {
+  background: #c0c0c0;
+  border: 2px outset #ffffff;
+  color: #000000;
+  font-size: 11px;
+  font-weight: bold;
+  width: 18px;
+  height: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-family: Arial;
+}
+.modalbody { padding: 16px; text-align: center; }
+
+/* POPUP ADS */
+.popad {
+  position: fixed;
+  z-index: 8000;
+  background: #c0c0c0;
+  border: 3px outset #ffffff;
+  width: 260px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+.padtitlebar {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+}
+.padclose {
+  background: #c0c0c0;
+  border: 2px outset #ffffff;
+  color: #000;
+  font-size: 10px;
+  font-weight: bold;
+  width: 16px; height: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.padbody { padding: 10px; text-align: center; }
+
+/* ENTRY SCREEN */
+#entryscreen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #c0c0c0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SCROLLING TICKER */
+.tickerbar {
+  background-color: #003399;
+  color: #ffff00;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.tickerinner {
+  display: inline-block;
+  animation: mq 20s linear infinite;
+}
+@keyframes mq { from { transform: translateX(100vw); } to { transform: translateX(-100%); } }
+
+/* MUSIC BAR */
+#musicbar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: #c0c0c0;
+  border-top: 2px outset #ffffff;
+  padding: 4px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  z-index: 7000;
+  align-items: center;
+  gap: 8px;
+}
+#musicbar.show { display: flex; }
+.musicdisc {
+  font-size: 16px;
+  animation: sp 2s linear infinite;
+  cursor: pointer;
+}
+.musicdisc.paused { animation: none; }
+@keyframes sp { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+
+/* Under construction gif simulation */
+.underconstruction {
+  display: inline-block;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffff00 0px, #ffff00 10px,
+    #000000 10px, #000000 20px
+  );
+  padding: 3px 8px;
+  font-family: Arial;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000;
+  border: 2px inset #999;
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  body { margin: 2px; }
+  .pagetitle { font-size: 20px; }
+  table { width: 100% !important; }
+  .mainwrap { width: 100% !important; }
+  #buymodal { width: 95vw; }
+  .popad { width: 220px; }
+  img.guruimg { max-height: 200px; }
+}
+</style>
+</head>
+<body>
+
+<audio id="bgaudio" loop>
+  <source src="bluebands.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ========== ENTRY SCREEN ========== -->
+<div id="entryscreen">
+  <table border="0" cellpadding="0" cellspacing="0" width="460" style="max-width:96vw;">
+    <tr>
+      <td>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#000080" style="border: 3px outset #ffffff;">
+          <tr>
+            <td bgcolor="#000080" style="padding:4px 8px; font-family:Arial; font-size:11px; font-weight:bold; color:white;">
+              Trading Academy by 3ptp &nbsp;-&nbsp; Welcome
+            </td>
+            <td align="right" bgcolor="#000080" style="padding:4px 6px;">
+              <span style="background:#c0c0c0; border:2px outset #fff; color:#000; font-size:10px; font-weight:bold; padding:1px 5px; cursor:default;">X</span>
+            </td>
+          </tr>
+        </table>
+        <table border="0" cellpadding="16" cellspacing="0" width="100%" bgcolor="#c0c0c0" style="border-left:3px outset #ffffff; border-right:3px outset #ffffff; border-bottom:3px outset #ffffff;">
+          <tr>
+            <td align="center">
+              <p class="pagetitle">Trading Academy</p>
+              <p style="font-family:'Times New Roman',serif; font-size:14px; color:#003399; font-weight:bold;">by 3ptp</p>
+
+              <hr size="2" color="#003399" width="80%">
+
+              <table border="1" cellpadding="8" cellspacing="0" bgcolor="#ffffcc" style="border-color:#999900; margin:10px auto;">
+                <tr>
+                  <td align="center" style="font-family:'Times New Roman',serif; font-size:13px; color:#000;">
+                    <b>*** IMPORTANT NOTICE ***</b><br><br>
+                    This website contains information about<br>
+                    <b>getting FUNDED and making MONEY</b><br>
+                    through trading.<br><br>
+                    Click <b>ENTER</b> to proceed.<br>
+                    <span style="font-size:10px; color:#666;">Background music will play. Turn down volume if needed.</span>
+                  </td>
+                </tr>
+              </table>
+
+              <br>
+
+              <table border="0" cellpadding="4" cellspacing="6">
+                <tr>
+                  <td align="center">
+                    <input type="button" value="[ ENTER SITE ]" onclick="enterSite()"
+                      style="font-family:'Times New Roman',serif; font-size:16px; font-weight:bold; color:#ffffff; background-color:#003399; border:3px outset #6666ff; padding:8px 30px; cursor:pointer; letter-spacing:1px;">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a href="#" onclick="return false;" style="font-size:10px; color:#666;">No thanks, I prefer to stay broke</a>
+                  </td>
+                </tr>
+              </table>
+
+              <br>
+              <p class="smalltext">Best viewed in Internet Explorer 6.0 at 800x600 resolution.<br>
+              &copy; 2025 Trading Academy by 3ptp. All rights reserved.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- ========== BUY MODAL ========== -->
+<div id="overlay" onclick="closeBuy()"></div>
+<div id="buymodal">
+  <div class="modaltitlebar">
+    <span>&#127881; Special Offer - Trading Academy by 3ptp</span>
+    <button class="modalclose" onclick="closeBuy()">X</button>
+  </div>
+  <div class="modalbody">
+    <p style="font-family:'Times New Roman',serif; font-size:22px; font-weight:bold; color:#003399;">BUY MY COURSE</p>
+    <p style="font-size:10px; color:#666; margin-top:-8px;">Limited Time Offer - Act Now!!</p>
+    <hr size="1">
+    <p class="winrate">$3,000</p>
+    <p style="font-size:11px; color:#666;">per month &nbsp;|&nbsp; cancel anytime (you wont lol)</p>
+    <hr size="1">
+    <table border="1" cellpadding="6" cellspacing="0" bgcolor="#ffffcc" style="border-color:#999900; margin:8px auto; text-align:left;">
+      <tr>
+        <td style="font-size:12px; font-family:Arial;">
+          gm fam. this is the only course teaching 100% real ICT concepts.<br>
+          my students are out here getting funded while you still asking<br>
+          <i>"is trading real bro"</i>. join now. stop being broke fr.
+        </td>
+      </tr>
+    </table>
+    <br>
+    <input type="button" value="YES - TAKE MY MONEY - JOIN NOW" onclick="closeBuy()"
+      style="font-family:Arial; font-size:12px; font-weight:bold; color:#fff; background:#cc0000; border:3px outset #ff6666; padding:7px 16px; cursor:pointer; width:100%;">
+    <br><br>
+    <a href="#" onclick="closeBuy(); return false;" style="font-size:10px; color:#999;">No thanks, I enjoy being broke lmaoooo</a>
+  </div>
+</div>
+
+<!-- ========== MAIN SITE ========== -->
+<div id="mainsite" style="display:none;">
+
+<!-- TOP TICKER -->
+<div class="tickerbar">
+  <span class="tickerinner">
+    &nbsp;&nbsp;&nbsp;
+    *** NEW *** 99.9% AVG WIN RATE NO CAP &nbsp;&nbsp;|&nbsp;&nbsp;
+    BTCUSD +420.69% &nbsp;&nbsp;|&nbsp;&nbsp;
+    XAUUSD LONG SETUP FR &nbsp;&nbsp;|&nbsp;&nbsp;
+    4,200+ STUDENTS FUNDED &nbsp;&nbsp;|&nbsp;&nbsp;
+    100% ICT LEARNING &nbsp;&nbsp;|&nbsp;&nbsp;
+    WALL STREET IS SCARED OF US &nbsp;&nbsp;|&nbsp;&nbsp;
+    ORDER BLOCK FORMED 4H &nbsp;&nbsp;|&nbsp;&nbsp;
+    JOIN DISCORD 24/7 LIVE CALLS &nbsp;&nbsp;|&nbsp;&nbsp;
+    *** FUNDED IN 14 DAYS GUARANTEED* ***
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>
+</div>
+
+<!-- HEADER TABLE -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr bgcolor="#003399">
+    <td style="padding:6px 10px;">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td>
+            <span style="font-family:'Times New Roman',serif; font-size:22px; font-weight:bold; color:#ffff00; letter-spacing:2px;">Trading Academy</span>
+            <span style="font-family:Arial; font-size:11px; color:#aaccff;">&nbsp;&nbsp;by 3ptp</span>
+          </td>
+          <td align="right" style="vertical-align:middle;">
+            <a href="#" class="navbtn">Home</a>&nbsp;
+            <a href="#courses" class="navbtn">Courses</a>&nbsp;
+            <a href="#proof" class="navbtn">Proof</a>&nbsp;
+            <a href="#testimonials" class="navbtn">Students</a>&nbsp;
+            <a href="#" class="navbtn" onclick="showBuy(); return false;" style="background:#cc0000; color:#fff; border-color:#ff6666;">BUY NOW</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!-- MAIN CONTENT WRAPPER -->
+<table border="0" cellpadding="4" cellspacing="4" width="100%" class="mainwrap">
+<tr valign="top">
+
+  <!-- LEFT SIDEBAR -->
+  <td width="160" valign="top">
+
+    <!-- Navigation box -->
+    <table border="0" cellpadding="0" cellspacing="0" width="160">
+      <tr><td class="sectiontitle">Navigation</td></tr>
+      <tr>
+        <td bgcolor="#ffffff" style="border:1px solid #999;">
+          <table border="0" cellpadding="3" cellspacing="0" width="100%">
+            <tr><td>&raquo; <a href="#">Home</a></td></tr>
+            <tr><td bgcolor="#eeeeff">&raquo; <a href="#courses">Courses</a></td></tr>
+            <tr><td>&raquo; <a href="#proof">Proof</a></td></tr>
+            <tr><td bgcolor="#eeeeff">&raquo; <a href="#testimonials">Students</a></td></tr>
+            <tr><td>&raquo; <a href="#contact">Contact</a></td></tr>
+            <tr><td bgcolor="#eeeeff">&raquo; <a href="#" onclick="showBuy(); return false;" style="color:#cc0000; font-weight:bold;">Buy Course</a></td></tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!-- Stats box -->
+    <table border="0" cellpadding="0" cellspacing="0" width="160">
+      <tr><td class="sectiontitle">Quick Stats</td></tr>
+      <tr>
+        <td bgcolor="#ffffff" style="border:1px solid #999;">
+          <table border="0" cellpadding="4" cellspacing="0" width="100%">
+            <tr>
+              <td align="center" bgcolor="#eeffee">
+                <span class="bignum">99.9%</span><br>
+                <span style="font-size:10px;">Avg Win Rate</span>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <span class="bignum" style="font-size:20px;">4,200+</span><br>
+                <span style="font-size:10px;">Students Funded</span>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#eeffee">
+                <span class="bignum" style="font-size:20px;">$8.4M</span><br>
+                <span style="font-size:10px;">Total Payouts</span>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <span class="bignum" style="font-size:20px;">100%</span><br>
+                <span style="font-size:10px;">ICT Learning</span>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#eeffee">
+                <span class="bignum" style="font-size:20px;">0%</span><br>
+                <span style="font-size:10px;">Losses (Trust Me)</span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!-- Visitor Counter -->
+    <table border="0" cellpadding="0" cellspacing="0" width="160">
+      <tr><td class="sectiontitle">Visitors</td></tr>
+      <tr>
+        <td bgcolor="#ffffff" style="border:1px solid #999; padding:6px; text-align:center;">
+          <span style="font-size:10px; font-family:Arial;">You are visitor #</span><br>
+          <span class="counter" id="visitcount">014722</span><br>
+          <span style="font-size:9px; color:#666;">since Jan 2023</span>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!-- Disclaimer -->
+    <table border="0" cellpadding="0" cellspacing="0" width="160">
+      <tr><td class="sectiontitle">Disclaimer</td></tr>
+      <tr>
+        <td bgcolor="#ffffcc" style="border:1px solid #999900; padding:5px;">
+          <span style="font-size:9px; color:#333; font-family:Arial;">
+            Trading involves risk. Past performance does not guarantee future results. Results shown may not be typical. Your capital is at risk. This site is for entertainment. Please don't actually spend $3000/month on trading courses.
+          </span>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!-- Under construction -->
+    <div class="underconstruction">&#9888; PAGE UNDER<br>CONSTRUCTION</div>
+
+    <br><br>
+
+    <!-- Guru image floating in sidebar -->
+    <div style="text-align:center;">
+      <img src="guru.png" alt="3ptp" width="130" class="guruimg"
+        style="animation: float 3s ease-in-out infinite;"
+        onerror="this.style.display='none'">
+      <br>
+      <span style="font-size:10px; color:#333; font-style:italic;">Your mentor, 3ptp</span>
+    </div>
+
+    <style>
+      @keyframes float {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+    </style>
+
+  </td>
+
+  <!-- MAIN CONTENT AREA -->
+  <td valign="top">
+
+    <!-- HERO / WELCOME BOX -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr><td class="sectiontitle">Welcome to Trading Academy by 3ptp</td></tr>
+      <tr>
+        <td bgcolor="#ffffff" style="border:1px solid #999;">
+          <table border="0" cellpadding="10" cellspacing="0" width="100%">
+            <tr valign="top">
+              <td>
+                <p style="font-family:'Times New Roman',serif; font-size:20px; font-weight:bold; color:#003399;">
+                  Stop Being Broke.<br>
+                  Learn ICT. Get Funded.
+                </p>
+                <p class="bodytext">
+                  Welcome to <b>Trading Academy by 3ptp</b> - the #1 online resource for
+                  learning <b>ICT (Inner Circle Trader)</b> concepts and passing prop firm challenges.
+                  We teach <b>100% pure price action</b> - no lagging indicators, no BS, just
+                  <span class="greentext">real trading knowledge</span> that Wall Street
+                  <span class="redtext">does NOT want you to have</span>.
+                </p>
+                <p class="bodytext">
+                  I personally went from <b>$0 to $8,032 funded</b> in 14 days using ONE ICT concept.
+                  My students are out here getting funded while you are still asking
+                  <i>"is trading even real bro"</i>. Join us. Stop wasting time.
+                </p>
+                <p>
+                  <input type="button" value="  BUY MY COURSE - $3,000/month  " onclick="showBuy()"
+                    style="font-family:Arial; font-size:13px; font-weight:bold; color:#fff; background:#cc0000; border:3px outset #ff6666; padding:6px 14px; cursor:pointer;">
+                  &nbsp;
+                  <a href="#courses" class="navbtn">View All Courses</a>
+                </p>
+
+                <!-- spinning claims -->
+                <table border="1" cellpadding="8" cellspacing="0" bgcolor="#eeeeff" style="border-color:#9999cc; margin-top:10px; width:100%;">
+                  <tr>
+                    <td align="center">
+                      <div class="spinbox">&#9658; 100% ICT LEARNING - INNER CIRCLE TRADER CONCEPTS ONLY &#9668;</div>
+                    </td>
+                  </tr>
+                  <tr bgcolor="#ddeedd">
+                    <td align="center">
+                      <div class="spinbox r">&#9658; ORDER BLOCKS &bull; FAIR VALUE GAPS &bull; KILL ZONES &bull; LIQUIDITY &#9668;</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <div class="spinbox g">&#9658; SMART MONEY IS WATCHING - WE FOLLOW THE BANKS BRO &#9668;</div>
+                    </td>
+                  </tr>
+                  <tr bgcolor="#ffeedd">
+                    <td align="center">
+                      <div class="spinbox r">&#9658; NO INDICATORS NO BS - PURE NAKED PRICE ACTION FR FR &#9668;</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <div class="spinbox p">&#9658; FUNDED IN 14 DAYS USING MY EXACT SIGMA BLUEPRINT &#9668;</div>
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!-- COURSES SECTION -->
+    <a name="courses"></a>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr><td class="sectiontitle">Our Courses - Choose Your Level</td></tr>
+      <tr>
+        <td bgcolor="#ffffff" style="border:1px solid #999; padding:8px;">
+          <table border="1" cellpadding="8" cellspacing="0" width="100%">
+            <tr bgcolor="#003399">
+              <th style="color:#ffff00; font-family:Arial; font-size:11px; text-align:left;">Course Name</th>
+              <th style="color:#ffff00; font-family:Arial; font-size:11px;">Level</th>
+              <th style="color:#ffff00; font-family:Arial; font-size:11px;">Price</th>
+              <th style="color:#ffff00; font-family:Arial; font-size:11px;">Action</th>
+            </tr>
+            <tr bgcolor="#ffffff">
+              <td>
+                <b style="color:#003399;">ICT Foundations: Stop Being Clueless</b><br>
+                <span style="font-size:11px;">What is a candle. What is a session. What is liquidity. I teach u the basics that school never did. Market structure from zero. Building sigma from ground up no cap.</span>
+              </td>
+              <td align="center" style="font-size:11px; white-space:nowrap;"><b>Beginner</b></td>
+              <td align="center" style="white-space:nowrap;"><span class="greentext" style="font-size:14px;">FREE*</span><br><span style="font-size:9px; color:#666;">*10min then paywall</span></td>
+              <td align="center" style="white-space:nowrap;">
+                <input type="button" value="Start Free" onclick="showBuy()"
+                  style="font-size:11px; font-weight:bold; color:#fff; background:#006600; border:2px outset #009900; padding:3px 8px; cursor:pointer;">
+              </td>
+            </tr>
+            <tr bgcolor="#fff8f8">
+              <td>
+                <b style="color:#cc0000;">&#9733; FUNDED TRADER BOOTCAMP - 14 Day Program &#9733;</b>
+                &nbsp;<span style="background:#cc0000; color:#fff; font-size:9px; padding:1px 4px;">BEST SELLER</span><br>
+                <span style="font-size:11px;">Bro in 14 days we go from zero to passing ur prop firm challenge. The exact setups I use. Exact risk management. Nothing held back. All sigma all day every day no days off.</span>
+              </td>
+              <td align="center" style="font-size:11px; white-space:nowrap;"><b>All Levels</b></td>
+              <td align="center" style="white-space:nowrap;"><span class="redtext" style="font-size:18px;">$3,000</span><br><span style="font-size:9px; color:#666;">per month</span></td>
+              <td align="center" style="white-space:nowrap;">
+                <input type="button" value="JOIN NOW" onclick="showBuy()"
+                  style="font-size:12px; font-weight:bold; color:#fff; background:#cc0000; border:2px outset #ff3333; padding:4px 10px; cursor:pointer;">
+              </td>
+            </tr>
+            <tr bgcolor="#ffffff">
+              <td>
+                <b style="color:#003399;">Sigma Mindset - Think Like The 1%</b><br>
+                <span style="font-size:11px;">Trading is 90% psychological bro. I read 3 books. I understand the human brain now. Losers lose because of emotions. Winners have no emotions. Become a robot. Get rich.</span>
+              </td>
+              <td align="center" style="font-size:11px; white-space:nowrap;"><b>Intermediate</b></td>
+              <td align="center" style="white-space:nowrap;"><span class="redtext" style="font-size:14px;">$997</span><br><span style="font-size:9px; color:#666;">one time</span></td>
+              <td align="center" style="white-space:nowrap;">
+                <input type="button" value="Unlock Mode" onclick="showBuy()"
+                  style="font-size:11px; font-weight:bold; color:#fff; background:#660099; border:2px outset #9933cc; padding:3px 8px; cursor:pointer;">
+              </td>
+            </tr>
+            <tr bgcolor="#fffff8">
+              <td>
+                <b style="color:#003399;">Discord Inner Circle - Live Trading Calls</b><br>
+                <span style="font-size:11px;">24/7 live calls with the boys. PnL screenshots. I post entries sometimes. Lifestyle content (chains, watches, etc). U genuinely need to be in here fr this is not a drill.</span>
+              </td>
+              <td align="center" style="font-size:11px; white-space:nowrap;"><b>All Levels</b></td>
+              <td align="center" style="white-space:nowrap;"><span class="redtext" style="font-size:14px;">$299</span><br><span style="font-size:9px; color:#666;">per month</span></td>
+              <td align="center" style="white-space:nowrap;">
+                <input type="button" value="LFG Join" onclick="showBuy()"
+                  style="font-size:11px; font-weight:bold; color:#fff; background:#003399; border:2px outset #3366ff; padding:3px 8px; cursor:pointer;">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!-- PROOF SECTION -->
+    <a name="proof"></a>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr><td class="sectiontitle">Proof - The Receipts Are Real Bro</td></tr>
+      <tr>
+        <td bgcolor="#ffffff" style="border:1px solid #999; padding:10px;">
+          <table border="0" cellpadding="8" cellspacing="8" width="100%">
+            <tr valign="top">
+              <td width="50%">
+                <p class="bodytext">
+                  <b>My students hold funded awards from literally every major prop firm on the planet.</b>
+                  These are not printed from Canva. These are real. Scroll down for testimonials from real people
+                  who joined this course and stopped being broke.
+                </p>
+                <ul style="font-size:12px; line-height:2;">
+                  <li>FTMO Passed Verification - Feb 22, 2025 - signed by CEO himself</li>
+                  <li>Alpha Capital $8,032 payout - real money, real bank account fr fr</li>
+                  <li>ThinkCapital $872 funded award - started 2 weeks before this photo trust me</li>
+                  <li>99.9% avg win rate - calculated by me on my calculator app</li>
+                  <li>100% ICT methodology - no lagging indicators ever allowed here</li>
+                  <li>Students in 47 countries - sigma has no borders</li>
+                </ul>
+                <p>
+                  <input type="button" value="I Want Results Like This - Join Now" onclick="showBuy()"
+                    style="font-size:12px; font-weight:bold; color:#fff; background:#cc0000; border:2px outset #ff3333; padding:5px 12px; cursor:pointer;">
+                </p>
+              </td>
+              <td width="50%" align="center">
+                <img src="award.png" alt="Funded Award" style="max-width:200px; width:100%; animation:float2 4s ease-in-out infinite;" onerror="this.style.display='none'">
+                <br><br>
+                <img src="plaque.png" alt="FTMO Plaque" style="max-width:180px; width:100%; animation:float2 4s ease-in-out infinite 2s;" onerror="this.style.display='none'">
+              </td>
+            </tr>
+          </table>
+          <style>
+            @keyframes float2 {
+              0%,100%{transform:rotate(-2deg) scale(1);}
+              50%{transform:rotate(2deg) scale(1.03);}
+            }
+          </style>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!-- TESTIMONIALS -->
+    <a name="testimonials"></a>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr><td class="sectiontitle">Student Testimonials - Real People Real Results</td></tr>
+      <tr>
+        <td bgcolor="#ffffff" style="border:1px solid #999; padding:8px;">
+          <table border="0" cellpadding="6" cellspacing="6" width="100%">
+            <tr valign="top">
+              <td width="50%">
+                <table border="1" cellpadding="8" cellspacing="0" width="100%" bgcolor="#f9f9ff" style="border-color:#9999cc;">
+                  <tr bgcolor="#003399">
+                    <td style="font-family:Arial; font-size:11px; font-weight:bold; color:#ffff00;">
+                      XxTraderBoyxX &nbsp;|&nbsp; <span style="color:#aaccff;">21 yrs &bull; prev broke &bull; now funded</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size:12px; font-style:italic; color:#333;">
+                      "bro i joined this 3 weeks ago and already passed ftmo. i was working at mcdonald's and now i make more in a single trade than a whole shift flipping burgers. this is not a drill. real talk no cap."
+                    </td>
+                  </tr>
+                  <tr bgcolor="#eeffee">
+                    <td style="font-size:13px; font-weight:bold; color:#006600; text-align:right;">
+                      Profit: +$2,400 &#9650;
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td width="50%">
+                <table border="1" cellpadding="8" cellspacing="0" width="100%" bgcolor="#f9f9ff" style="border-color:#9999cc;">
+                  <tr bgcolor="#003399">
+                    <td style="font-family:Arial; font-size:11px; font-weight:bold; color:#ffff00;">
+                      FXWizard_Kev &nbsp;|&nbsp; <span style="color:#aaccff;">24 yrs &bull; formerly wage slave &bull; free now</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size:12px; font-style:italic; color:#333;">
+                      "i tried 12 other courses bro. THIS one is different. the ICT concepts actually clicked after module 2. i quit my job. my girlfriend is proud of me now. she was not before this course i promise."
+                    </td>
+                  </tr>
+                  <tr bgcolor="#eeffee">
+                    <td style="font-size:13px; font-weight:bold; color:#006600; text-align:right;">
+                      Payout: +$8,032 &#9650;
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td width="50%">
+                <table border="1" cellpadding="8" cellspacing="0" width="100%" bgcolor="#f9f9ff" style="border-color:#9999cc;">
+                  <tr bgcolor="#003399">
+                    <td style="font-family:Arial; font-size:11px; font-weight:bold; color:#ffff00;">
+                      SigmaFX_God &nbsp;|&nbsp; <span style="color:#aaccff;">19 yrs &bull; still in school &bull; trades in class</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size:12px; font-style:italic; color:#333;">
+                      "this course changed my entire brain chemistry. i understand liquidity. i understand smart money. i AM the smart money now. i see the matrix bro. i cannot be stopped anymore lfg no cap forever."
+                    </td>
+                  </tr>
+                  <tr bgcolor="#eeffee">
+                    <td style="font-size:13px; font-weight:bold; color:#006600; text-align:right;">
+                      Funded: +$1,200 &#9650;
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td width="50%">
+                <table border="1" cellpadding="8" cellspacing="0" width="100%" bgcolor="#f9f9ff" style="border-color:#9999cc;">
+                  <tr bgcolor="#003399">
+                    <td style="font-family:Arial; font-size:11px; font-weight:bold; color:#ffff00;">
+                      PipsGod_Bless &nbsp;|&nbsp; <span style="color:#aaccff;">22 yrs &bull; 3x funded &bull; growing daily</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size:12px; font-style:italic; color:#333;">
+                      "real talk this is my 3rd prop firm pass in 60 days. i ONLY use setups from this course. order blocks 15m with 4h confluence. it is literally free money bro i dont understand why everyone doesnt do this."
+                    </td>
+                  </tr>
+                  <tr bgcolor="#eeffee">
+                    <td style="font-size:13px; font-weight:bold; color:#006600; text-align:right;">
+                      Total: +$4,800 &#9650;
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!-- CONTACT / FOOTER INFO -->
+    <a name="contact"></a>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr><td class="sectiontitle">Contact & Links</td></tr>
+      <tr>
+        <td bgcolor="#ffffff" style="border:1px solid #999; padding:10px;">
+          <table border="0" cellpadding="4" cellspacing="0" width="100%">
+            <tr valign="top">
+              <td width="33%">
+                <b style="font-size:12px;">Contact Us</b><br>
+                <span style="font-size:11px;">
+                  Email: <a href="#">3ptp@tradingacademy.com</a><br>
+                  Discord: <a href="#">discord.gg/tradingacademy</a><br>
+                  Twitter: <a href="#">@3ptp</a>
+                </span>
+              </td>
+              <td width="33%">
+                <b style="font-size:12px;">Quick Links</b><br>
+                <span style="font-size:11px;">
+                  <a href="#courses">All Courses</a><br>
+                  <a href="#proof">Student Proof</a><br>
+                  <a href="#testimonials">Testimonials</a>
+                </span>
+              </td>
+              <td width="33%">
+                <b style="font-size:12px;">Site Info</b><br>
+                <span style="font-size:11px;">
+                  &copy; 2025 Trading Academy by 3ptp<br>
+                  All Rights Reserved<br>
+                  <span style="color:#999;">Best viewed 800x600, IE 6</span>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+  </td>
+
+  <!-- RIGHT SIDEBAR -->
+  <td width="150" valign="top">
+
+    <!-- Buy box -->
+    <table border="0" cellpadding="0" cellspacing="0" width="150">
+      <tr><td style="background:#cc0000; color:#fff; font-family:'Times New Roman',serif; font-size:13px; font-weight:bold; padding:3px 6px;">Special Offer!</td></tr>
+      <tr>
+        <td bgcolor="#fff8f8" style="border:2px outset #ff9999; padding:8px; text-align:center;">
+          <span style="font-size:11px; font-weight:bold; color:#cc0000;">BUY MY COURSE</span><br>
+          <span style="font-family:'Times New Roman',serif; font-size:26px; font-weight:bold; color:#cc0000;">$3,000</span><br>
+          <span style="font-size:9px; color:#666;">per month</span><br>
+          <br>
+          <input type="button" value="JOIN NOW" onclick="showBuy()"
+            style="font-size:12px; font-weight:bold; color:#fff; background:#cc0000; border:3px outset #ff6666; padding:5px 14px; cursor:pointer; width:100%;">
+          <br>
+          <span style="font-size:9px; color:#999; font-style:italic; margin-top:4px; display:block;">or stay broke lol</span>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!-- Claim box -->
+    <table border="0" cellpadding="0" cellspacing="0" width="150">
+      <tr><td class="sectiontitle" style="font-size:12px;">Why Us?</td></tr>
+      <tr>
+        <td bgcolor="#ffffff" style="border:1px solid #999; padding:6px;">
+          <span style="font-size:11px;">
+            &#9989; 100% ICT<br>
+            &#9989; 99.9% Win Rate<br>
+            &#9989; Real Payouts<br>
+            &#9989; Live Discord<br>
+            &#9989; 24/7 Support<br>
+            &#9989; Sigma Only<br>
+            &#10060; No indicators<br>
+            &#10060; No lagging BS
+          </span>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!-- fake web ring -->
+    <table border="0" cellpadding="0" cellspacing="0" width="150">
+      <tr><td class="sectiontitle" style="font-size:12px;">Web Ring</td></tr>
+      <tr>
+        <td bgcolor="#ffffff" style="border:1px solid #999; padding:5px; text-align:center;">
+          <span style="font-size:9px; color:#333;">
+            &laquo; <a href="#">Prev</a> &nbsp; <a href="#">Ring</a> &nbsp; <a href="#">Next</a> &raquo;<br>
+            <br>
+            <a href="#" style="font-size:9px;">Trading Sites Ring</a>
+          </span>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!-- fake banner ad -->
+    <table border="2" cellpadding="0" cellspacing="0" width="150" style="border-color:#999; cursor:pointer;" onclick="showBuy()">
+      <tr>
+        <td bgcolor="#003399" style="padding:12px 6px; text-align:center;">
+          <span style="font-family:'Times New Roman',serif; font-size:14px; font-weight:bold; color:#ffff00;">
+            MAKE $$$<br>TRADING<br>TODAY!!!
+          </span>
+          <br>
+          <span style="font-size:10px; color:#aaccff;">Click Here Now!!</span>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!-- awards imgs in sidebar too -->
+    <table border="0" cellpadding="0" cellspacing="0" width="150">
+      <tr><td class="sectiontitle" style="font-size:12px;">Our Awards</td></tr>
+      <tr>
+        <td bgcolor="#fff" style="border:1px solid #999; padding:6px; text-align:center;">
+          <img src="award.png" alt="funded award" style="max-width:130px; width:100%;" onerror="this.style.display='none'">
+          <br>
+          <span style="font-size:9px; color:#666;">Student Funded Award</span>
+        </td>
+      </tr>
+    </table>
+
+  </td>
+
+</tr>
+</table>
+
+<!-- PAGE FOOTER -->
+<table border="0" cellpadding="6" cellspacing="0" width="100%" bgcolor="#003399">
+  <tr>
+    <td align="center" style="color:#aaccff; font-family:Arial; font-size:10px;">
+      &copy; 2025 <b style="color:#ffff00;">Trading Academy by 3ptp</b> &nbsp;|&nbsp;
+      All Rights Reserved &nbsp;|&nbsp;
+      <a href="#" style="color:#aaccff;">Home</a> &nbsp;|&nbsp;
+      <a href="#courses" style="color:#aaccff;">Courses</a> &nbsp;|&nbsp;
+      <a href="#proof" style="color:#aaccff;">Proof</a> &nbsp;|&nbsp;
+      <a href="#" onclick="showBuy(); return false;" style="color:#ffff00;">Buy Course</a>
+      <br>
+      <span style="font-size:9px; color:#8899bb;">
+        *Results not typical. Most traders lose money. Past performance does not guarantee future results. This is satire for entertainment only. The 99.9% win rate was calculated using a calculator app and vibes. Please do not spend $3,000/month on trading courses.
+      </span>
+    </td>
+  </tr>
+</table>
+
+<!-- MUSIC BAR -->
+<div id="musicbar">
+  <span class="musicdisc" id="disc" onclick="toggleMusic()">&#128191;</span>
+  <span style="font-size:11px; color:#003399; font-weight:bold; flex:1;">
+    NOW PLAYING: Weiland - Blue Bands &nbsp;
+    <span style="font-size:9px; color:#666; font-weight:normal;">[ Trading Academy FM ]</span>
+  </span>
+  <input type="button" value="&#9646;&#9646; PAUSE" id="musicbtn" onclick="toggleMusic()"
+    style="font-size:10px; background:#dddddd; border:2px outset #fff; padding:2px 6px; cursor:pointer;">
+</div>
+
+</div><!-- end mainsite -->
+
+<script type="text/javascript">
+  var aud = document.getElementById('bgaudio');
+  var playing = false;
+  var adIdx = 0;
+  var adCount = 0;
+
+  var ads = [
+    {t:'Advertisement', h:'You Could Be Rich Right Now', p:'While you read this, 12 students just got funded. Don\'t be left behind. Join Today!!'},
+    {t:'Special Offer!!', h:'FREE Webinar Tonight Only', p:'How I made $8,032 in 2 weeks using 1 ICT concept. Click to register while spots last.'},
+    {t:'IMPORTANT NOTICE', h:'Only 3 Spots Left!!', p:'Mentorship at $3,000/month. This is your sign from the universe bro. Last chance.'},
+    {t:'New Module Added!', h:'Kill Zone Mastery is Live', p:'London + NY killzones explained step by step. Exclusive to paid members only.'},
+    {t:'Your Bank Called', h:'It Misses You', p:'Fill it with funded account payouts. Join Trading Academy now. Don\'t wait.'},
+    {t:'WARNING!!', h:'Price Increases Tomorrow', p:'Last time we said this it was true. Probably. Join now before it goes to $5,000/month.'},
+    {t:'Student Alert', h:'@XxTraderBoy Just Got Paid', p:'$2,400 payout - joined only 3 weeks ago. What is YOUR excuse right now?'}
+  ];
+
+  function enterSite() {
+    document.getElementById('entryscreen').style.display = 'none';
+    document.getElementById('mainsite').style.display = 'block';
+    document.getElementById('musicbar').classList.add('show');
+    aud.volume = 0.35;
+    aud.play().then(function(){ playing = true; }).catch(function(){});
+
+    // visitor counter increment
+    var v = 14722;
+    setInterval(function(){
+      v += Math.floor(Math.random() * 3);
+      document.getElementById('visitcount').textContent = v.toString().padStart(6,'0');
+    }, 7000);
+
+    setTimeout(function(){ spawnAd(); }, 2000);
+    setTimeout(function(){ spawnAd(); }, 5500);
+    setTimeout(function(){ spawnAd(); }, 10000);
+    setTimeout(function(){ spawnAd(); }, 16000);
+    setInterval(function(){ spawnAd(); }, 22000);
+    setTimeout(function(){ showBuy(); }, 20000);
+  }
+
+  function toggleMusic() {
+    if (playing) {
+      aud.pause();
+      playing = false;
+      document.getElementById('disc').classList.add('paused');
+      document.getElementById('musicbtn').value = '\u25BA PLAY';
+    } else {
+      aud.play();
+      playing = true;
+      document.getElementById('disc').classList.remove('paused');
+      document.getElementById('musicbtn').value = '\u2590\u2590 PAUSE';
+    }
+  }
+
+  function showBuy() {
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('buymodal').style.display = 'block';
+  }
+  function closeBuy() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('buymodal').style.display = 'none';
+  }
+
+  function spawnAd() {
+    var d = ads[adIdx % ads.length];
+    adIdx++;
+    adCount++;
+
+    var el = document.createElement('div');
+    el.className = 'popad';
+
+    var topArr = [10,18,28,40,52,62,72];
+    var top = topArr[Math.floor(Math.random() * topArr.length)];
+    var goLeft = Math.random() > 0.5;
+    var sideVal = Math.floor(Math.random() * 10 + 1);
+    var sideStr = goLeft ? ('left:' + sideVal + 'vw') : ('right:' + sideVal + 'vw');
+
+    el.style.cssText = 'top:' + top + '%;' + sideStr + ';z-index:' + (8000 + adCount);
+
+    el.innerHTML =
+      '<div class="padtitlebar">' +
+        '<span>' + d.t + '</span>' +
+        '<button class="padclose" onclick="tryCloseAd(this)">X</button>' +
+      '</div>' +
+      '<div class="padbody">' +
+        '<b style="font-size:12px; color:#003399;">' + d.h + '</b><br><br>' +
+        '<span style="font-size:11px; color:#333;">' + d.p + '</span><br><br>' +
+        '<input type="button" value="Click Here Now!!" onclick="showBuy()"' +
+          'style="font-size:11px; font-weight:bold; color:#fff; background:#cc0000; border:2px outset #ff3333; padding:3px 8px; cursor:pointer; width:100%;">' +
+      '</div>';
+
+    document.body.appendChild(el);
+  }
+
+  function tryCloseAd(btn) {
+    var ad = btn.closest('.popad');
+    ad.style.display = 'none';
+
+    setTimeout(function(){
+      ad.style.display = 'block';
+      var topArr = [10,22,38,52,68];
+      ad.style.top = topArr[Math.floor(Math.random() * topArr.length)] + '%';
+      ad.style.left = '';
+      ad.style.right = '';
+      if (Math.random() > 0.5) {
+        ad.style.left = (Math.floor(Math.random()*10)+1) + 'vw';
+      } else {
+        ad.style.right = (Math.floor(Math.random()*10)+1) + 'vw';
+      }
+    }, 2000 + Math.floor(Math.random() * 2000));
+
+    setTimeout(function(){ spawnAd(); }, 800);
+  }
+</script>
+
+</body>
+</html>
